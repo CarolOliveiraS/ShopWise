@@ -1,0 +1,245 @@
+/* Adicionando borda aos itens da lista */
+.item-row {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Animação de adição de item */
+.added-animation {
+  animation: addedAnimation 0.5s;
+}
+
+@keyframes addedAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animação de remoção de item */
+.deleted-animation {
+  animation: deletedAnimation 0.5s;
+}
+
+@keyframes deletedAnimation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Hintergrundfarbe des Body */
+body {
+  background: linear-gradient(to right, rgb(185, 210, 222), rgb(74, 108, 128));
+  /* Fallback for older browsers */
+
+}
+
+/* Logo */
+img {
+  max-width: 100%; /* Setzt die maximale Breite auf 100% des Elterncontainers */
+  height: 310px; /* Setzt die Höhe automatisch, um das Seitenverhältnis beizubehalten */
+  display: block;
+  margin: 20px auto; /* Zentriert das Logo durch automatische Ränder */
+}
+
+/* Motto */
+h1 {
+  text-align: center;
+  margin: 20px auto; /* Zentriert das Motto durch automatische Ränder */
+  font-family: ar;
+  
+}
+
+/* Buttons */
+.btn-outline-warning {
+  text-align: center;
+  width: auto; /* Setzt die Breite basierend auf dem Inhalt */
+  margin: 10px; /* Fügt gleichmäßige Ränder hinzu */
+  background-color: orange;
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Hinzufügen-Button */
+.add-button,
+.save-button,
+.reset-button,
+.deletelist-button,
+.downloadlist-button {
+  width: 190px; /* Setzt eine maximale Breite */
+  height: 50px;
+  margin: 0px; /* Adds some space above the button */
+  text-overflow: ellipsis;
+  padding: auto;
+}
+
+/* Container */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Eingabegruppe */
+.input-group {
+  width: 100%;
+  text-align: center;
+}
+
+/* Zentriert den Inhalt horizontal */
+.justify-content-md-center {
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* Bearbeiten-Icon, Löschen-Icon */
+.bi-pencil-square,
+.bi-trash {
+  text-align: center;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* Einkäufer */
+.einkäufer,
+.kategorie {
+  font-family: Arial, sans-serif; /* Define a mesma fonte para os campos de texto */
+  width: calc(25% - 2px); /* Largura igual para os campos de texto */
+  margin-right: 5px; /* Espaçamento entre os campos */
+  margin-left: 6px;
+  padding: 5px; /* Preenchimento igual */
+  border: 1px solid #ccc; /* Borda com o mesmo tamanho */
+  border-radius: 4px; /* Borda arredondada */
+}
+
+input[type="number"] {
+  width: calc(10% - 2px); /* Largura igual para o campo de número */
+  margin-right: 6px; /* Espaçamento entre os campos */
+  margin-left: 6px;
+  padding: 5px; /* Preenchimento igual */
+  border: 1px solid #ccc; /* Borda com o mesmo tamanho */
+  border-radius: 4px; /* Borda arredondada */
+}
+
+.add-button,
+.save-button,
+.reset-button,
+.deletelist-button,
+.downloadlist-button {
+  width: calc(20% - 2px); /* Largura igual para os botões */
+  margin-right: 5px; /* Espaçamento entre os campos */
+  padding: 5px; /* Preenchimento igual */
+  border: 1px solid orange; /* Borda com o mesmo tamanho */
+  background-color: orange; /* Cor de fundo */
+  color: #fff; /* Cor do texto */
+  border-radius: 4px; /* Borda arredondada */
+}
+
+/* Media-Query para pequenas telas */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .einkäufer,
+  .einkaufslisten {
+    width: 100%;
+  }
+
+  .btn-outline-warning.add-button,
+  .btn-outline-warning.save-button,
+  .btn-outline-warning.reset-button,
+  .btn-outline-warning.deletelist-button,
+  .btn-outline-warning.downloadlist-button {
+    width: 100%;
+  }
+
+  .justify-content-md-center {
+    justify-content: center;
+  }
+
+  .table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .table-rounded {
+    border-radius: 10px;
+  }  
+  
+}
+
+/* Media-Query para dispositivos de largura máxima de 480px (tamanho de celular) */
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .einkäufer,
+  .einkaufslisten {
+    width: 100%;
+  }
+
+  .btn-outline-warning.add-button,
+  .btn-outline-warning.save-button,
+  .btn-outline-warning.reset-button,
+  .btn-outline-warning.deletelist-button,
+  .btn-outline-warning.downloadlist-button {
+    width: 100%;
+    margin: 5px 0; /* Ajuste o espaçamento entre os botões */
+  }
+}
+
+/* Eingabegrupo para campos de texto e número, e dropdowns */
+.input-group input[type="text"],
+.input-group input[type="number"],
+.input-group select {
+  width: 150px; /* Adjusted width for the "Einheit" field */
+  margin: 10px;
+}
+
+/* Efeitos para o comportamento de mouseover do ícone de lixeira */
+.bi-trash:hover,
+.btn-outline-warning .bi-trash:hover {
+  transform: scale(1.2);
+}
+
+/* Efeitos para o comportamento de mouseover do ícone de lápis */
+.bi-pencil-square:hover,
+.btn-outline-warning .bi-pencil-square:hover {
+  transform: scale(1.2);
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.table-scroll {
+  overflow-x: auto;
+  margin-bottom: 15px; /* Adiciona um espaço abaixo da tabela para evitar cortes em alguns dispositivos */
+}
+
