@@ -42,8 +42,8 @@ jobs:
 
       - name: Build and push Docker image
         run: |
-          docker build -t bestione/shopwize:${{ github.sha }} .
-          docker tag bestione/shopwize:${{ github.sha }} bestione/shopwize:latest
-          docker push bestione/shopwize:${{ github.sha }}
-          docker push bestione/shopwize:latest
+          docker build -t carololiveira/shopwise:${{ github.sha }} .
+          docker tag carololiveira/shopwise:${{ github.sha }} carololiveira/shopwise:latest
+          docker push carololiveira/shopwise:${{ github.sha }}
+          docker push carololiveira/shopwise:latest
 
