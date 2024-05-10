@@ -144,7 +144,7 @@ resource "aws_instance" "ansible" {
     yum install -y docker
     systemctl enable docker
     systemctl start docker
-    docker run -d -p 80:80 bestione/shopwize:latest
+    docker run -d -p 80:80 carololiveira/shopwise:latest
   EOF
 }
 resource "aws_instance" "ansible_b" {
@@ -161,7 +161,7 @@ resource "aws_instance" "ansible_b" {
     yum install -y docker
     systemctl enable docker
     systemctl start docker
-    docker run -d -p 80:80 bestione/shopwize:latest
+    docker run -d -p 80:80 carololiveira/shopwise:latest
   EOF
 }
 
@@ -179,7 +179,7 @@ resource "aws_instance" "ansible_c" {
     yum install -y docker
     systemctl enable docker
     systemctl start docker
-    docker run -d -p 80:80 bestione/shopwize:latest
+    docker run -d -p 80:80 carololiveira/shopwise:latest
   EOF
 }
 
